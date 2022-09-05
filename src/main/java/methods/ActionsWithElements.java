@@ -68,19 +68,6 @@ public class ActionsWithElements {
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("arguments[0].click()", element);
     }
-
-//    public void WaitElementAndScroll(ChromeDriver driver, String typeSelector, String selector) throws InterruptedException {
-//        WaitElement(driver, typeSelector, selector);
-//        WebElement element = driver.findElement(By.xpath(selector));
-//        Actions newTab = new Actions(driver);
-//        newTab
-//                .sendKeys(Keys.PAGE_DOWN)
-//                .moveToElement(driver.findElement(By.xpath("//span[text() = ' Только в наличии ']")))
-//                .build()
-//                .perform();
-//        //((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-//    }
-
     public void WaitElementsAndClickChekBox(ChromeDriver driver, String typeSelector, String selector){
         WaitElement(driver, typeSelector, selector);
         List<WebElement> elements = driver.findElements(By.xpath(selector));
@@ -146,7 +133,6 @@ public class ActionsWithElements {
         map.forEach((k, v) -> {
             System.out.println(v + " - " + k);
         });
-        //System.out.println("Elements at basket: " + map);
 
         System.out.println();
         System.out.println("Summa elementov v korzine: " + summaElements);

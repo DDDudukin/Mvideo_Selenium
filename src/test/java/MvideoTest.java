@@ -40,6 +40,5 @@ public class MvideoTest {
         actionsWithElements.WaitElementsAndClickAndAddToBasket(driver, "xpath", ButtonAddToBasket);
         actionsWithElements.JSClick(driver, "xpath", ButtonBasket);
         assertElements.ComparisonElements(driver, "xpath", BasketProcessorName, BasketProcessorPrice, FinalSumma);
-        System.out.println();
     }
 }
