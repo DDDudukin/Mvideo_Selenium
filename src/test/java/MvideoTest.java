@@ -25,7 +25,7 @@ public class MvideoTest {
 
     @AfterClass
     public void TearDown() {
-        driver.quit();
+        driver.close();
     }
 
     @Test
