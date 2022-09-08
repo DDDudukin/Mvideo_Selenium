@@ -26,9 +26,9 @@ public class ActionsWithElements {
         WaitElement(driver, typeSelector, selector).click();
     }
 
-//    public void WaitElementAndSendKeys(ChromeDriver driver, String typeSelector, String selector, String value) {
-//        WaitElement(driver, typeSelector, selector).sendKeys(value);
-//    }
+// public void WaitElementAndSendKeys(ChromeDriver driver, String typeSelector, String selector, String value) {
+// WaitElement(driver, typeSelector, selector).sendKeys(value);
+// }
 
     public void WaitAndMoveToElement(ChromeDriver driver, String typeSelector, String selector) {
         WaitElement(driver, typeSelector, selector);
@@ -73,11 +73,11 @@ public class ActionsWithElements {
         List<WebElement> elements = driver.findElements(By.xpath(selector));
         for (int i = 0; i < elements.size(); i++){
             int j = i + 1;
-           JSClick(driver, typeSelector, selector + "[" + j + "]");
+            JSClick(driver, typeSelector, selector + "[" + j + "]");
         }
     }
     public void WaitElementsAndAddToListNameAndPrice(ChromeDriver driver, String typeSelector, String selectorName, String selectorPrice){
-       Map<String, String> map = new HashMap<>();
+        Map<String, String> map = new HashMap<>();
         WaitElement(driver, typeSelector, selectorName);
         Actions newTab = new Actions(driver);
         newTab
@@ -93,22 +93,22 @@ public class ActionsWithElements {
                 .pause(Duration.ofMillis(500))
                 .build()
                 .perform();
-       WaitElement(driver, typeSelector, selectorName);
-       List<WebElement> elements = driver.findElements(By.xpath(selectorName));
-       for (int i = 0; i < elements.size(); i++){
-           int j = i + 1;
-           map.put(driver.findElement(By.xpath(selectorName + "[" + j + "]")).getText(),
-                   driver.findElement(By.xpath( selectorPrice + "[" + j + "]")).getText())                   ;
-       }
+        WaitElement(driver, typeSelector, selectorName);
+        List<WebElement> elements = driver.findElements(By.xpath(selectorName));
+        for (int i = 0; i < elements.size(); i++){
+            int j = i + 1;
+            map.put(driver.findElement(By.xpath(selectorName + "[" + j + "]")).getText(),
+                    driver.findElement(By.xpath( selectorPrice + "[" + j + "]")).getText()) ;
+        }
         System.out.println();
-       System.out.println("Elements at page processors: " + map);
+        System.out.println("Elements at page processors: " + map);
     }
     public void WaitElementsAndClickAndAddToBasket(ChromeDriver driver, String typeSelector, String selector) throws InterruptedException {
         WaitElement(driver, typeSelector, selector);
         List<WebElement> elements = driver.findElements(By.xpath(selector));
         for (int i = 0; i < elements.size(); i++){
             JSClick(driver, typeSelector, selector);
-             Thread.sleep(1000);
+            Thread.sleep(1000);
         }
     }
 
@@ -133,7 +133,6 @@ public class ActionsWithElements {
         map.forEach((k, v) -> {
             System.out.println(v + " - " + k);
         });
-
         System.out.println();
         System.out.println("Summa elementov v korzine: " + summaElements);
         return summaElements;

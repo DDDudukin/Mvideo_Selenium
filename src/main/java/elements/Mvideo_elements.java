@@ -14,6 +14,4 @@ public class Mvideo_elements {
     public static String BasketProcessorName = "(//a[@class = 'cart-item__name ng-star-inserted'])";
     public static String BasketProcessorPrice = "(//div[@class = 'cart-item-price' ]//span)";
     public static String FinalSumma = "//p[text() = 'Итого']//following-sibling::p";
-
-
 }
