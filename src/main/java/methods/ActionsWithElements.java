@@ -43,9 +43,9 @@ public class ActionsWithElements {
         WaitElement(driver, typeSelector, selector);
         Actions newTab = new Actions(driver);
         newTab
-                .moveToElement(driver.findElement(By.xpath("//span[text()='Процессоры']")))
+                .moveToElement(driver.findElement(By.xpath("//span[text()='РџСЂРѕС†РµСЃСЃРѕСЂС‹']")))
                 .keyDown(Keys.CONTROL)
-                .click(driver.findElement(By.xpath("//span[text()='Процессоры']")))
+                .click(driver.findElement(By.xpath("//span[text()='РџСЂРѕС†РµСЃСЃРѕСЂС‹']")))
                 .keyUp(Keys.CONTROL)
                 .build()
                 .perform();
