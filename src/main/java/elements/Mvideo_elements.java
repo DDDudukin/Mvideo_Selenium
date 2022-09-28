@@ -5,7 +5,7 @@ public class Mvideo_elements {
     public static String CategoryNoutsAndComps = "//a[text() = 'Ноутбуки и компьютеры']";
     public static String CategoryProcessors = "//span[text()='Процессоры']";
     public static String ElementInStock = "//span[text() = ' Только в наличии ']//ancestor::label//div[@class = 'slider']";
-    public static String CheckBoxesFrequency = "(//div[@class = 'accordion__content ng-tns-c207-10 ng-trigger ng-trigger-dropdownAnimation ng-star-inserted']//mvid-icon)";
+    public static String CheckBoxesFrequency = "(//div[@class = 'accordion__content ng-tns-c202-10 ng-trigger ng-trigger-dropdownAnimation ng-star-inserted']//mvid-icon)";
     public static String NameProcessor = "(//a[@class = 'product-title__text product-title--clamp'])";
     public static String PriceProcessor = "(//span[@class = 'price__main-value'])";
     public static String ButtonClear = "//span[@class = 'button__label ng-star-inserted'][text() = 'Очистить']";
